@@ -3,12 +3,20 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "dev": "parcel src/index.html"
+    "dev": "parcel src/index.html",
+    "format": "prettier \"src/**/*.{ts,html,css}\" --write",
+    "lint": "eslint \"src/**/*.{ts}\" --quiet"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "parcel": "^2.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.3.0",
+    "eslint-config-airbnb": "^19.0.1",
+    "eslint-config-prettier": "^8.3.0",
+    "prettier": "^2.5.0"
   }
 }

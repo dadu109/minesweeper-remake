@@ -1,6 +1,5 @@
 import { generateMinesweeperGrid } from "./generate-minesweeper-grid";
 
-
 const minesweeperGrid = generateMinesweeperGrid({
   rows: 20,
   cols: 20,
@@ -12,7 +11,9 @@ for (const row of minesweeperGrid) {
 
   for (const cell of row) {
     const span = document.createElement("span");
-    span.textContent = cell.isMine ? "💣" : cell.numberOfNeighbouringMines.toString();
+    span.textContent = cell.isMine
+      ? "💣"
+      : cell.numberOfNeighbouringMines.toString();
     span.classList.add("cell");
     div.appendChild(span);
   }
